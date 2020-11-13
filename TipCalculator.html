@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Tip calculator</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <nav class="container-fluid bg-dark p-1 text-center">
+    <h5 class="text-light text-center">RestoChain Tip Calculator</h5>
+  </nav>
+
+  <!-- Main body start-->
+  <div class="row  m-3 p-3">
+
+
+    <div class=" col-md-12 bg-info">
+
+
+
+      <!-- Card for Tip Calculator start -->
+      <div class="card my-2">
+
+        <!-- Card header -"Tip Calculator" -->
+        <div class="card-header text-center bg-light">Tip Calculator </div>
+
+        <!-- Card body -->
+        <div class="card-body">
+
+          <!-- Tip calculator form start -->
+          <form>
+
+            <!-- Row 1 -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="bill">Bill</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <i class="fa fa-rupee" style="font-size:30px;color:rgb(179, 177, 177)"></i> &nbsp;&nbsp;
+                  </div>
+                  <input type="text" class="form-control col-md-5 getElement" id="bill" placeholder="0">
+                </div>
+                <small id="error" class="form-text text-danger"></small>
+
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="tipPerPerson">Tip</label>
+                <small id="perPerson" class="form-text text-muted">Per Person</small>
+              </div>
+              <div class="form-group col-md-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <i class="fa fa-rupee" style="font-size:30px;color:rgb(179, 177, 177)"></i> &nbsp;&nbsp;
+                  </div>
+                  <input type="text" class="border-0 getElement text-center" id="tipPerPerson" placeholder="0" disabled>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Row 2 -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="tipPercent">Tip %</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary getElement" id="tipPercentDec" type="button">-</button>
+                  </div>
+                  <input type="text" class="form-control getElement col-md-3 text-center" id="tipPercent" value="10%"
+                    disabled>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary getElement" id="tipPercentInc" type="button">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="totalPerPerson">Total </label>
+                <small id="perPerson" class="form-text text-muted">Per Person</small>
+              </div>
+              <div class="form-group col-md-3">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <i class="fa fa-rupee" style="font-size:30px;color:rgb(179, 177, 177)"></i> &nbsp;&nbsp;</div>
+                  <input type="text" class="getElement border-0 text-center" id="totalPerPerson" placeholder="0"
+                    disabled>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Row 3 -->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="numberOfPeople">Number of people</label>
+
+                <!-- <input type="number" min="1" max="9" step="1" value="1" disabled> -->
+
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary getElement" id="numberOfPeopleDec" type="button">-</button>
+                  </div>
+                  <input type="text" class="form-control col-md-3 getElement text-center" id="numberOfPeople" value="1"
+                    disabled>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary getElement" id="numberOfPeopleInc" type="button">+</button>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <!-- Tip Calculator card end here -->
+
+    </div>
+
+  </div>
+  <!-- Main body end here-->
+
+
+  <!-- My Custom JavaScript include here -->
+  <script src="tipcalculator.js" type=" text/javascript"></script>
+
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
